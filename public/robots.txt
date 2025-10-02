@@ -1,0 +1,5 @@
+# Banana Editor - Open Source
+User-agent: *
+Allow: /
+
+Sitemap: http://localhost:3003/sitemap.xml
