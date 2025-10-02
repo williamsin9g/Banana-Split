@@ -1248,33 +1248,7 @@ function AdCreativeCanvasReactFlow({ projectId: initialProjectId = null }: AdCre
       <div className="sticky top-0 left-0 right-0 z-40 bg-white border-b border-gray-200 shadow-sm">
         <div className="flex items-center justify-between px-6 py-2">
           <div className="flex-1 flex items-center">
-            {/* Knowledge Graph Button */}
-            <div className="neu-button-container mr-4">
-              <div className="neu-button-label">
-                {currentLanguage === 'zh-tw' ? '知識圖譜' : 'Knowledge Graph'}
-              </div>
-              <button
-                onClick={() => {
-                  if (!analysisComplete) return;
-                  console.log('🧠 Opening Knowledge Graph...');
-                  setShowKnowledgeGraph(true);
-                }}
-                disabled={!analysisComplete}
-                className="neu-button"
-                title={!analysisComplete
-                  ? (currentLanguage === 'zh-tw' ? '請先上傳並分析產品圖片' : 'Please upload and analyze product image first')
-                  : (currentLanguage === 'zh-tw' ? '知識圖譜' : 'Knowledge Graph')
-                }
-              >
-                <div className="neu-button-outer">
-                  <div className="neu-button-inner">
-                    <svg className="neu-button-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                    </svg>
-                  </div>
-                </div>
-              </button>
-            </div>
+            {/* Knowledge Graph Button removed for open source version */}
           </div>
           
           <div className="flex-1 flex justify-center">
