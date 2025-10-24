@@ -1,18 +1,38 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // 圖片優化配置
   images: {
-    domains: ['localhost'],
+    domains: ['localhost', 'williamsin9g-banana-h4ke.bolt.host'],
     unoptimized: true
   },
-  
-  // Webpack 配置
+
   webpack: (config) => {
     config.resolve.alias = {
       ...config.resolve.alias,
       '@': '/src',
     };
     return config;
+  },
+
+  async headers() {
+    return [
+      {
+        source: '/:path*',
+        headers: [
+          {
+            key: 'Access-Control-Allow-Origin',
+            value: '*',
+          },
+          {
+            key: 'Access-Control-Allow-Methods',
+            value: 'GET, POST, PUT, DELETE, OPTIONS',
+          },
+          {
+            key: 'Access-Control-Allow-Headers',
+            value: 'Content-Type, Authorization',
+          },
+        ],
+      },
+    ];
   },
 }
 
