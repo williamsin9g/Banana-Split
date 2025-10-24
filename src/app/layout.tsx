@@ -1,10 +1,7 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import './globals.css'
 import 'reactflow/dist/style.css'
 import '../styles/combine-mode-switch.css'
-
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Banana Editor - Open Source',
@@ -19,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="zh-TW">
-      <body className={inter.className}>
+      <body>
         {children}
       </body>
     </html>
